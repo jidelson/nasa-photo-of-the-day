@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
-
+import axios from 'axios';
 function App() {
+  const [nasaDailyData, setNasaDailyData] = useState()
+
+  useEffect(() => {
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=J6JxN8wcBrZa0egigi1eNI05w4ApldnMrb3Gk0LO`)
+  }
+  )
+
   return (
     <div className="App">
       <p>
